@@ -1,9 +1,13 @@
-function App() {
+import React from 'react';
+
+function App({ size }) {
   return (
-    <div className='App'>
-      <div className='text-blue-600'>React</div>
-      <div className='text-pink-600'>Storybook</div>
-      <div className='text-blue-400'>Tainwind</div>
+    <div
+      className={`${
+        size === 'big' ? 'text-4xl' : 'text-xl'
+      } text-blue-500 font-bold tracking-wider text-center`}
+    >
+      Hello React Tailwind Storybook
     </div>
   );
 }
