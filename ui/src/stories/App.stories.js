@@ -1,9 +1,9 @@
-import React from 'react';
-import App from '../App';
-import '../index.css';
+import React from "react";
+import App from "../App";
+import "../index.css";
 
 export default {
-  title: 'Example/App',
+  title: "Example/App",
   component: App,
 };
 

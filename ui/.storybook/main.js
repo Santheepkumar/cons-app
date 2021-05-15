@@ -21,6 +21,14 @@ module.exports = {
       ],
       include: path.resolve(__dirname, "../"),
     });
-    return config;
+    return {
+      ...config,
+      plugins: config.plugins.filter((plugin) => {
+        if (plugin.constructor.name === "ESLintWebpackPlugin") {
+          return false;
+        }
+        return true;
+      }),
+    };
   },
 };
