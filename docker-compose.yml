@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  cons-app:
+    build: ./
+    image: cons-img
+    ports:
+      - "3001:3000"
+    working_dir: /cons-app/ui
+    command: ["yarn", "start"]
+    networks:
+      - cons
+
+  cons-storybook:
+    image: cons-img:latest
+    ports:
+      - "6007:6006"
+    working_dir: /cons-app/ui
+    command: ["yarn", "storybook"]
+    networks:
+      - cons
+    depends_on:
+      - cons-app
+
+networks:
+  cons:
+    driver: bridge
