@@ -4,7 +4,7 @@ import "../index.css";
 
 export default {
   title: "Example/App",
-  component: App,
+  component: App
 };
 
 const Template = () => <App size="big" />;
