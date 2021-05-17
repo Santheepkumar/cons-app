@@ -1,13 +1,19 @@
 import React from "react";
+import useDarkMode from "./hooks/useDarkMode";
 
-function App({ size }) {
+function App() {
+  const [colorTheme, setTheme] = useDarkMode();
   return (
-    <div
-      className={`${
-        size === "big" ? "text-4xl" : "text-xl"
-      } text-blue-500 font-bold tracking-wider text-center`}
-    >
-      Hello React Tailwind Storybook
+    <div className="bg-white dark:bg-black h-screen transition duration-500">
+      <button
+        type="button"
+        className="text-black dark:text-white border rounded-md px-4 py-2 focus:outline-none"
+        onClick={() => setTheme(colorTheme)}
+      >
+        Switch Theme
+      </button>
+      <div className="text-black dark:text-white">Next theme - {colorTheme}</div>
+      <div className=" text-black dark:text-white">Hello React Tailwind Storybook</div>
     </div>
   );
 }
