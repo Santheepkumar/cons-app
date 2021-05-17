@@ -5,22 +5,17 @@ services:
     image: cons-img
     ports:
       - "3001:3000"
-    working_dir: /cons-app/ui
-    command: ["yarn", "start"]
-    networks:
-      - cons
-
-  cons-storybook:
-    image: cons-img:latest
-    ports:
       - "6007:6006"
     working_dir: /cons-app/ui
-    command: ["yarn", "storybook"]
+    command: bash -c "nohup yarn start & yarn storybook"
+    volumes:
+      - cons-ui:/cons-app/ui
     networks:
       - cons
-    depends_on:
-      - cons-app
 
 networks:
   cons:
     driver: bridge
+
+volumes:
+  cons-ui:
