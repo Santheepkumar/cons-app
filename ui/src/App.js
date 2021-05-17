@@ -1,4 +1,5 @@
 import React from "react";
+// import Navbar from "./components/common/Navbar";
 import useDarkMode from "./hooks/useDarkMode";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <div className="text-black dark:text-white">Next theme - {colorTheme}</div>
       <div className=" text-black dark:text-white">Hello React Tailwind Storybook</div>
     </div>
+    // <Navbar />
   );
 }
 
