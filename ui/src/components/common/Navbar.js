@@ -12,21 +12,21 @@ function Navbar() {
       </div>
       {colorTheme === "dark" ? (
         <div
-          className="mr-20 border bg-purple-600 rounded-full p-1 cursor-pointer"
-          onClick={() => setTheme(colorTheme)}
-          role="button"
-          aria-hidden="true"
-        >
-          <LightMode stroke="white" className="w-10 h-10" />
-        </div>
-      ) : (
-        <div
           className="mr-20 border bg-gray-600 rounded-full p-1 cursor-pointer"
           onClick={() => setTheme(colorTheme)}
           role="button"
           aria-hidden="true"
         >
           <DarkMode stroke="yellow" fill="gray" className="w-10 h-10" />
+        </div>
+      ) : (
+        <div
+          className="mr-20 border bg-purple-600 rounded-full p-1 cursor-pointer"
+          onClick={() => setTheme(colorTheme)}
+          role="button"
+          aria-hidden="true"
+        >
+          <LightMode stroke="white" className="w-10 h-10" />
         </div>
       )}
     </nav>
