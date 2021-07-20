@@ -3,7 +3,7 @@ import Navbar from "./common/Navbar";
 
 function Home() {
   return (
-    <div className="bg-white dark:bg-dark h-screen ">
+    <div className="bg-light dark:bg-dark h-screen ">
       <Navbar />
 
       <div className="ml-40 mt-32">
